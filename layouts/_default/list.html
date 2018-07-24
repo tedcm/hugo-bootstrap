@@ -1,13 +1,21 @@
 {{ partial "head" . }}
-<div class="container post-container">
-  <header>
-    {{ partial "content/h1-title" . }}
-  </header>
-  <ul class="container">
-    {{ range $index, .Paginator.Pages }}
-      <li>{{ partial "content/title-link" . }}</li>
-    {{ end }}
-  </ul>
+{{ partial "base/header" . }}
+<div class="container p-b-2">
+  <div class="row">
+    <div class="col-xs-12 col-md-10 post-container">
+      <header>
+        {{ partial "content/h1-title" . }}
+      </header>
+      <ul class="container">
+        {{ range $index, .Paginator.Pages }}
+          <li>{{ partial "content/title-link" . }}</li>
+      {{ end }}
+    </ul>
   {{ partial "content/pagination.html" . }}
+</div>
+    <div class="col-xs-12 col-md-2">
+      {{ partial "content/sidebar" .}}
+    </div>
+  </div>
 </div>
 {{ partial "foot" . }}

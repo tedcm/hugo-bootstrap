@@ -1,4 +1,5 @@
 <nav class="navbar navbar-expand-md fixed-top site-navbar {{ .Site.Params.navbarBgColorClass | default .Site.Data.Defaults.navbarBgColorClass }}">
+    <div class="container">
     <a class="navbar-brand text-white" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
   <button class="navbar-toggler" 
   type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2"
@@ -16,5 +17,6 @@
       </li>
       {{end}}
     </ul>
+  </div>
   </div>
 </nav>

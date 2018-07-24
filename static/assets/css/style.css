@@ -167,7 +167,7 @@ h1.post-title a{
   transition: 0.2s ease;
 }
 #recent-post li {
-  padding: 5px 0 5px 85px;
+  padding: 5px 0 5px 0px;
 }
 #recent-post li:before, #recent-post li:after {
   content: "";
