@@ -16,6 +16,7 @@
         {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
         {{ range $paginator.Pages.ByDate.Reverse }}
           {{ .Render "summary" }}
+          <hr>
         {{ end }}
         {{ partial "content/pagination" . }}
       </div>

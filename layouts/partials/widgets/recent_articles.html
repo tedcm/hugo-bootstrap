@@ -1,10 +1,11 @@
 {{ if .Site.Params.widgets.recent_articles }}
+<br>
 <div class="card card-block">
   <h4 class="card-title text-nowrap">RECENT POSTS</h4>
   <div class="card-text">
     <div class="widget">
       <ul id="recent-post">
-        {{ range first 5 (where .Site.RegularPages "Type" "post") }}
+        {{ range first 6 (where .Site.RegularPages "Type" "post") }}
         <li>
           <!--<div class="item-thumbnail bg-dark">-->
           <!--    <a href="{{ .Permalink }}" class="thumbnail">-->
@@ -31,6 +32,7 @@
         {{ end }}
       </ul>
     </div>
+    <hr>
   </div>
 </div>
 {{ end }}
