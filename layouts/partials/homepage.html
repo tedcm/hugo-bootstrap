@@ -1,3 +1,4 @@
+  <br>
   <div class="container">
     {{ if isset .Site.Params.showBlogHeader true }}
       <div class="row">
@@ -17,6 +18,7 @@
         {{ range $paginator.Pages.ByDate.Reverse }}
           {{ .Render "summary" }}
           <hr>
+          <br>
         {{ end }}
         {{ partial "content/pagination" . }}
       </div>
